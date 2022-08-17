@@ -1,8 +1,8 @@
 <?php
 
 class Controller_Api extends Controller {
-    function __construct() {
-        $this -> model = new Model_Api();
+    function __construct($model=true) {
+        if ($model) $this -> model = new Model_Api();
         $this -> view = new View();
     }
 
@@ -59,6 +59,17 @@ class Controller_Api extends Controller {
                 $this -> success(), 
                 "template_api");
         }
+    }
+
+    function action_ready() {
+        $this -> view -> generate(
+            $this -> success(file_exists("data/onload.flag")), 
+            "template_api");
+    }
+    function action_init() {
+        $this -> view -> generate(
+            $this -> success(file_exists("data/onload.flag")), 
+            "template_api");
     }
 
     public function fetch_data($raw) {
