@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "e873617e-bf66-4865-9f85-25ad2be5d2e7",
+		"name": "Videogames",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8258064"
+	},
+	"item": [
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8084/api/games/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"games",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8084/api/games?title=Fallout&developer=BlackIsle&tags=Adventure,RPG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"games"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Fallout"
+						},
+						{
+							"key": "developer",
+							"value": "BlackIsle"
+						},
+						{
+							"key": "tags",
+							"value": "Adventure,RPG"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/games/9?tags=1,2&developer=StarFish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"games",
+						"9"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "1,2"
+						},
+						{
+							"key": "developer",
+							"value": "StarFish"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/games/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"games",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
